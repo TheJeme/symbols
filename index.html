@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: hidden;
+        justify-content: center;
+      }
+      span {
+        font-size: 18px;
+        margin: 0.5rem;
+      }
+    </style>
+    <title>Symbols List</title>
+  </head>
+  <body>
+    <div id="symbols"></div>
+    <script>
+      const start = 0x00;
+      const end = 0xffff;
+      const symbolListDiv = document.getElementById("symbols");
+      for (let i = start; i <= end; i++) {
+        const symbolSpan = document.createElement("span");
+        symbolSpan.textContent = String.fromCharCode(i);
+        symbolListDiv.appendChild(symbolSpan);
+      }
+    </script>
+  </body>
+</html>
