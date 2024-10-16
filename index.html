@@ -18,18 +18,18 @@
         margin: 0.5rem;
       }
     </style>
-    <title>Symbols List</title>
+    <title>Symbols</title>
   </head>
   <body>
     <div id="symbols"></div>
     <script>
       const start = 0x00;
       const end = 0xffff;
-      const symbolListDiv = document.getElementById("symbols");
+      const symbolsDiv = document.getElementById("symbols");
       for (let i = start; i <= end; i++) {
         const symbolSpan = document.createElement("span");
         symbolSpan.textContent = String.fromCharCode(i);
-        symbolListDiv.appendChild(symbolSpan);
+        symbolsDiv.appendChild(symbolSpan);
       }
     </script>
   </body>
